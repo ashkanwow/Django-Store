@@ -34,208 +34,209 @@
     </div>
 </div>
 <div id="right_59" class="container-fluid">
-<div class="container">
-    <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-12">
-            <div class="speedbar" style="background-color: #359CBC">
-                <span class="white">&nbsp;<i class="fa fa-calendar fa-1x"></i>&nbsp;امروز : یکشنبه 26 مردادماه 96</span>
-            </div>
-
-        </div>
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-            <div class="speedbar" style="background-color: #f5f5f5; color: #444">
-                <span>شما اینجا هستید » </span>
-                <span>جدیدترین ارسالی ها</span>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-            <div class="panel-default">
-                <div class="panel-heading">
-                    پیشنـهادهای ویژه
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-md-12 col-xs-6">
-                            <a href="#">
-                                <img src="Images/freetime.png" class="img-responsive" /><br />
-                            </a>
-                        </div>
-                        <div class="col-md-12 col-xs-6">
-                            <a href="#">
-                                <img src="Images/summer.png" class="img-responsive" />
-                            </a><br />
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
-            <div class="row product">
-
-                <!-- Product show -->
-
-                {% if products %}
-                {% for product in products %}
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 gray-box host-box box3">
-                    <div class="box">
-                        <img src="{{ product.photo.url }}" class="img-responsive" />
-                        <div class="box-desc">
-                            <h3>سرور مجازی</h3>
-                            <span class="en">VPS</span>
-                            <ul>
-                                <li><strong>سریع، قابل سفارشی سازی و ایمن</strong></li>
-                                <li>منابع اختصاصی</li>
-                                <li>امکان افزایش منابع</li>
-                                <li>امکان نصب نرم افزارهای خاص</li>
-                            </ul>
-                            <a class="btn btn-success-index " href="https://www.iranserver.com/vps/">
-                                مشاهده کلاس
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-                {% else %}
-                <div class="
-                                    col-md-12">
-                    <p> مطلبی وجود ندارد </p>
-                </div>
-                {% endif %}
-            </div>
-            <!-- Pagination -->
-
-            <div class="row">
-                <div class="col-md-12">
-                    {% if products.has_other_pages %}
-                    <ul class="pagination">
-                        {% if products.has_previous %}
-                        <li class="page-item">
-                            <a href="?page={{products.previous_page_number}}" class="page-link">&laquo;
-                            </a>
-                        </li>
-                        {% else %}
-                        <li class="page-item disabled">
-                            <a class="page-link">&laquo;</a>
-                        </li>
-                        {% endif %}
-                        {% for i in products.paginator.page_range %}
-                        {% if products.number == i %}
-                        <li class="page-item active">
-                            <a class="page-link">{{i}}</a>
-                        </li>
-                        {% else %}
-                        <li class="page-item">
-                            <a href="?page={{i}}" class="page-link">{{i}}</a>
-                        </li>
-                        {% endif %}
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 col-md-12">
-            <h4 class="text-center pad10T hr_style">محبوب ترین ها</h4>
-            <div id="owl-product" class="owl-carousel owl-ltr">
-                <div class="item">
-                    <a href="#">
-                        <img src="Images/Products/img_36.jpg" class="img-responsive" />
-                        <span>
-                            دانلود افزونه وردپرس تب JetTabs نسخه 1.1.4
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="Images/Products/img_37.jpg" class="img-responsive" />
-                        <span>
-                            دانلود مجموعه آیکون فروشگاهی E-CONS Icons
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="Images/Products/img_38.jpg" class="img-responsive" />
-                        <span>
-                            sprite دانلود طرح لایه باز کارت ویزیت و پوستر
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="Images/Products/img_39.jpg" class="img-responsive" />
-                        <span>
-                            دانلود قالب فروشگاهی ووکامرس ShopMe
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="Images/Products/img_40.jpg" class="img-responsive" />
-                        <span>
-                            دانلود قالب تک صفحه ای و پارالاکس وردپرس
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="Images/Products/img_41.jpg" class="img-responsive" />
-                        <span>
-                            دانلود افزونه وردپرس تب JetTabs نسخه 1.1.4
-
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="Images/Products/img_37.jpg" class="img-responsive" />
-                        <span>
-                            دانلود مجموعه آیکون فروشگاهی E-CONS Icons
-                        </span>
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="Images/Products/img_38.jpg" class="img-responsive" />
-                        <span>
-                            دانلود قالب تک صفحه ای و پارالاکس وردپرس
-                        </span>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="Link" class="container-fluid pad30A">
     <div class="container">
         <div class="row">
-            <a href="https://telegram.me/SourceClub" target="_blank" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 telegram mrg15B pad10B hvr-float-shadow">
-                <i class="fa fa-send Linkico pull-right mrg15R"></i>
-                <h3>کانـال تلگـــــرام</h3>
-                <p>برای عضویت در کانال اینجا کلیک نمایید</p>
-            </a>
-            <a href="TopNews.html" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 telegram bleft mrg15B pad10B hvr-float-shadow">
-                <i class="fa  fa-bullhorn Linkico pull-right mrg15R"></i>
-                <h3>اخبـار و اطلاعیه ها</h3>
-                <p>جهت مشاهده اطلاعیه ها اینجا کلیک نمایید</p>
-            </a>
-            <a href="ContactUs.html" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 telegram mrg15B pad10B hvr-float-shadow">
-                <i class="fa fa-contao Linkico  pull-right mrg15R"></i>
-                <h3>ارتباط سریع</h3>
-                <p>جهت ارتباط سریع اینجا کلیک نمایید</p>
-            </a>
+            <div class="col-lg-3 col-md-3 col-sm-12">
+                <div class="speedbar" style="background-color: #359CBC">
+                    <span class="white">&nbsp;<i class="fa fa-calendar fa-1x"></i>&nbsp;امروز : یکشنبه 26 مردادماه 96</span>
+                </div>
+
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="speedbar" style="background-color: #f5f5f5; color: #444">
+                    <span>شما اینجا هستید » </span>
+                    <span>جدیدترین ارسالی ها</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="panel-default">
+                    <div class="panel-heading">
+                        پیشنـهادهای ویژه
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12 col-xs-6">
+                                <a href="#">
+                                    <img src="Images/freetime.png" class="img-responsive" /><br />
+                                </a>
+                            </div>
+                            <div class="col-md-12 col-xs-6">
+                                <a href="#">
+                                    <img src="Images/summer.png" class="img-responsive" />
+                                </a><br />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="row product">
+
+                    <!-- Product show -->
+
+                    {% if products %}
+                    {% for product in products %}
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 gray-box host-box box3">
+                        <div class="box">
+                            <img src="{{ product.photo.url }}" class="img-responsive" />
+                            <div class="box-desc">
+                                <h6>{{ product.title }} </h6>
+                                <hr class="style1">
+                                <ul>
+                                    <li><strong>سریع، قابل سفارشی سازی و ایمن</strong></li>
+                                    <li>منابع اختصاصی</li>
+                                    <li>امکان افزایش منابع</li>
+                                    <li>امکان نصب نرم افزارهای خاص</li>
+                                </ul>
+                                <hr class="style1">
+                                <a class="btn btn-success-index " href="{% url 'product' product.id  %}">
+                                    دریافت اطلاعات
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <div class="
+                                    col-md-12">
+                        <p> مطلبی وجود ندارد </p>
+                    </div>
+                    {% endif %}
+                </div>
+                <!-- Pagination -->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        {% if products.has_other_pages %}
+                        <ul class="pagination">
+                            {% if products.has_previous %}
+                            <li class="page-item">
+                                <a href="?page={{products.previous_page_number}}" class="page-link">&laquo;
+                                </a>
+                            </li>
+                            {% else %}
+                            <li class="page-item disabled">
+                                <a class="page-link">&laquo;</a>
+                            </li>
+                            {% endif %}
+                            {% for i in products.paginator.page_range %}
+                            {% if products.number == i %}
+                            <li class="page-item active">
+                                <a class="page-link">{{i}}</a>
+                            </li>
+                            {% else %}
+                            <li class="page-item">
+                                <a href="?page={{i}}" class="page-link">{{i}}</a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
-{% endblock content %}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <h4 class="text-center pad10T hr_style">محبوب ترین ها</h4>
+                <div id="owl-product" class="owl-carousel owl-ltr">
+                    <div class="item">
+                        <a href="#">
+                            <img src="Images/Products/img_36.jpg" class="img-responsive" />
+                            <span>
+                                دانلود افزونه وردپرس تب JetTabs نسخه 1.1.4
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="Images/Products/img_37.jpg" class="img-responsive" />
+                            <span>
+                                دانلود مجموعه آیکون فروشگاهی E-CONS Icons
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="Images/Products/img_38.jpg" class="img-responsive" />
+                            <span>
+                                sprite دانلود طرح لایه باز کارت ویزیت و پوستر
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="Images/Products/img_39.jpg" class="img-responsive" />
+                            <span>
+                                دانلود قالب فروشگاهی ووکامرس ShopMe
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="Images/Products/img_40.jpg" class="img-responsive" />
+                            <span>
+                                دانلود قالب تک صفحه ای و پارالاکس وردپرس
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="Images/Products/img_41.jpg" class="img-responsive" />
+                            <span>
+                                دانلود افزونه وردپرس تب JetTabs نسخه 1.1.4
+
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="Images/Products/img_37.jpg" class="img-responsive" />
+                            <span>
+                                دانلود مجموعه آیکون فروشگاهی E-CONS Icons
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="Images/Products/img_38.jpg" class="img-responsive" />
+                            <span>
+                                دانلود قالب تک صفحه ای و پارالاکس وردپرس
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Link" class="container-fluid pad30A">
+        <div class="container">
+            <div class="row">
+                <a href="https://telegram.me/SourceClub" target="_blank" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 telegram mrg15B pad10B hvr-float-shadow">
+                    <i class="fa fa-send Linkico pull-right mrg15R"></i>
+                    <h3>کانـال تلگـــــرام</h3>
+                    <p>برای عضویت در کانال اینجا کلیک نمایید</p>
+                </a>
+                <a href="TopNews.html" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 telegram bleft mrg15B pad10B hvr-float-shadow">
+                    <i class="fa  fa-bullhorn Linkico pull-right mrg15R"></i>
+                    <h3>اخبـار و اطلاعیه ها</h3>
+                    <p>جهت مشاهده اطلاعیه ها اینجا کلیک نمایید</p>
+                </a>
+                <a href="ContactUs.html" class="col-lg-4 col-md-4 col-sm-4 col-xs-12 telegram mrg15B pad10B hvr-float-shadow">
+                    <i class="fa fa-contao Linkico  pull-right mrg15R"></i>
+                    <h3>ارتباط سریع</h3>
+                    <p>جهت ارتباط سریع اینجا کلیک نمایید</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endblock content %}

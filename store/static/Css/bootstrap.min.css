@@ -2019,6 +2019,17 @@ pre code {
     overflow-y: scroll;
 }
 
+.container-fluid-pages {
+    /*padding-right: 15px;
+    padding-left: 15px;*/
+    padding-right: 7.5px;
+    margin-top: 80px;
+    padding-left: 7.5px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+
 .container-fluid {
     /*padding-right: 15px;
     padding-left: 15px;*/

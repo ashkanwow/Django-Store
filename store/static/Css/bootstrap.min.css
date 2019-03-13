@@ -8371,9 +8371,18 @@ button.close {
 
 /* رنگ دکمه های محصولات داخل ایندکس */
 .btn-success-index {
-    color: rgb(231, 9, 9);
-    background-color: #20be4c;
-    border-color: #20be4c;
+    color: #fff !important;
+    background: #20be4c !important;
+    border-radius: 3px;
+    padding: 4px 10px;
+    font-size: 15px;
+    letter-spacing: -1px;
+    transition: all .4s;
+    text-align: center;
+    width: 150px;
+    margin: 0 auto !important;
+    display: inline-block;
+
 }
 
 .btn-success-index:hover {

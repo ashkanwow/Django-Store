@@ -1,0 +1,351 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<img src=" {% static 'Images/Slide32.jpg' %} " class="img-responsive topimg" />
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 hidden-xs">
+                <div class="speedbar" style="background-color: #359CBC">
+                    <span class="white">&nbsp;<i class="fa fa-calendar fa-1x"></i>&nbsp;امروز : یکشنبه 26 مردادماه
+                        96</span>
+                </div>
+
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="speedbar" style="background-color: #f5f5f5; color: #444">
+                    <span>شما اینجا هستید » </span>
+                    <span>پروفایل کاربری</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="panel-default">
+                    <div class="panel-heading">
+                        پیشنـهادهای ویژه
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12 col-xs-6">
+                                <a href="#">
+                                    <img src="Images/freetime.png" class="img-responsive" /><br />
+                                </a>
+                            </div>
+                            <div class="col-md-12 col-xs-6">
+                                <a href="#">
+                                    <img src="Images/summer.png" class="img-responsive" />
+                                </a><br />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+
+                <div class="panel-default pad10A">
+                    <div class="section-title">
+                        <h5 class="titlepg">پروفایل کاربری</h5>
+                    </div>
+                    <div class="well mrg15A">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                <span>نام کاربری :</span>&nbsp;<span>{{ user.username }}</span><br />
+                                <span>تاریخ عضویت :</span>&nbsp;<span>{{ user.date_joined }}</span><br />
+                                <span>آخرین بازدیداز سایت :</span>&nbsp;<span>26 شهریور 96 10:20</span><br />
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                <span>گـروه کاربری :</span>&nbsp;<span>کاربر عادی</span><br />
+                                <span>وضعیت کاربر :</span>&nbsp;<span>آنلاین</span><br />
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 hidden-xs">
+                                <img class="pull-right img-responsive" src="Images/avatar.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% include 'partials/_alerts.html' %}
+                <div class="panel-body">
+                    <div class="widget radius-bordered">
+                        <div class="widget-body">
+                            <div class="docs-example">
+                                <ul class="nav nav-tabs tabs-flat">
+                                    <li class="active"><a href="#EditProfile" data-toggle="tab" aria-expanded="false"><i
+                                                class="fa fa-edit fa-1x"></i>&nbsp;ویرایش
+                                            مشخصات</a></li>
+                                    <li class=""><a href="#Inbox" data-toggle="tab" aria-expanded="true"><i class="fa fa-inbox fa-1x"></i>&nbsp;صندوق
+                                            ورودی</a></li>
+                                    <!--<li class=""><a href="#Recently" data-toggle="tab" aria-expanded="true"><i class="fa fa-refresh fa-1x"></i>&nbsp;سوابـق خرید</a></li>-->
+                                </ul>
+                                <div class="tab-content tabs-flat">
+                                    <div class="tab-pane active mrg5A mrg20T" id="EditProfile">
+                                        <div class="row">
+                                            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                                <div class="form-group">
+                                                    <form action="{% url 'dashboard' %}" method="POST">
+                                                        {% csrf_token %}
+                                                        <!-- <input class="form-control mrg15B" name="email" type="email"
+                                                                placeholder="پست الکترونیک" required oninvalid="this.setCustomValidity('لطفا ایمیل را صحیح وارد فرمایید ')"
+                                                                oninput="setCustomValidity('')" /> -->
+
+                                                        <input class="form-control mrg15B" name="username" type="text"
+                                                            placeholder="نام کاربری" required/>
+
+                                                        <input class="form-control mrg15B" name="password" type="password"
+                                                            placeholder="رمز عبور فعلی" required autocomplete="off" />
+
+
+                                                        <input class="form-control mrg15B" name="password1" type="password"
+                                                            placeholder="رمز عبور جدید" required oninvalid="this.setCustomValidity('رمز عبور خود را درست وارد کنید')"
+                                                            oninput="setCustomValidity('')" pattern=".{6,}" title=" رمز عبور وارده باید حداقل 6 حرف باشد"
+                                                            autocomplete="off" />
+
+                                                        <input class="form-control mrg15B" name="password2" type="password"
+                                                            placeholder="تکرار رمز عبور جدید" required oninvalid="this.setCustomValidity('رمز عبور خود را درست وارد کنید')"
+                                                            oninput="setCustomValidity('')" autocomplete="off" />
+
+                                                        <span>آپلود آواتار :</span>
+                                                        <input class="mrg15B" type="file" />
+                                                        <input type="checkbox" class="mrg15B" />&nbsp;<span>حـذف
+                                                            تصویر</span><br />
+                                                        <button type="submit" class="btn  btn-success">ثبت تغییرات</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+                                                <img src="Images/Profile.jpg" class="img-responsive pull-right" />
+                                            </div>
+                                        </div>
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane  mrg5A mrg20T" id="Inbox">
+                                        <div class="row mrg80B">
+                                            <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12">
+                                                <div class="alert alert-info">
+                                                    <span style="color: #f50000"><i class="fa fa-bell-o"></i>&nbsp;در
+                                                        حال حاضر 1 پیام خصوصی
+                                                        دارید !</span>
+                                                </div>
+                                                <span>وضعیت صندوق :</span><br />
+                                                <div class="progress progress-striped active">
+                                                    <div class="progress-bar progress-bar-success" role="progressbar"
+                                                        aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                                                        <span>1%</span>
+                                                    </div>
+                                                </div>
+                                                <span>1 % از 100 پیام</span><br />
+                                                <hr />
+
+                                                <br />
+                                                <h5>صندوق ورودی</h5>
+                                                <hr />
+                                                <!--<div class="table-responsive ">
+                                                            <table class="table table-bordered table-hover table-striped dataTable text-center">
+                                                                <thead style="background-color: #3CC1EA; color: #000;">
+                                                                    <tr>
+                                                                        <th>
+                                                                            پـیام ها
+                                                                        </th>
+                                                                        <th>
+                                                                            گیـرنده
+                                                                        </th>
+                                                                        <th>
+                                                                            تـاریخ
+                                                                        </th>
+                                                                        <th>
+                                                                            <a class="btn btn-primary">حذف</a>
+                                                                        </th>
+                                                                        <th>
+                                                                            حـذف
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a href="#readpm">پیام آزمایشی</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            Admin
+                                                                        </td>
+                                                                        <td>
+                                                                            96/6/25 - 20:38
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="checkbox" />
+                                                                        </td>
+                                                                        <td>
+                                                                            <a class="btn btn-danger">حذف</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <a href="#readpm">پیام آزمایشی 2</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            Admin
+                                                                        </td>
+                                                                        <td>
+                                                                            96/6/28 - 10:25
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="checkbox" />
+                                                                        </td>
+                                                                        <td>
+                                                                            <a class="btn btn-danger">حذف</a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>-->
+
+
+                                                <!--<br /><br />
+                                                        <h5>متن پیام</h5>
+                                                        <hr />-->
+                                                <div id="readpm" class="alert alert-dashblue  mrg5A mrg20T">
+                                                    <div class="row pad15T">
+                                                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                                                            <img class="pull-left img-responsive img-rounded" src="Images/avatar.jpg" />
+                                                            <div class="pull-left pad15R">
+                                                                <span>Shamim</span>&nbsp;|&nbsp;<span>عضو
+                                                                    عادی</span><br />
+                                                                <span>26 مرداد 96 19.25</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                                            <a href="#" class="close btn btn-danger pull-right"
+                                                                data-dismiss="alert">حذف</a>
+                                                            <a href="#" class="btn btn-success pull-right mrg5L">پـاسخ&nbsp;<i
+                                                                    class="fa fa-mail-reply"></i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row pad15T">
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                            <span class="pad15R">لطفا قالب های وردپرس را هم اضافه
+                                                                کنید - باتشکر </span>
+                                                            <br />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <br /><br />
+
+                                                <h5>ارسال پیام جدید</h5>
+                                                <hr />
+                                                <div class="row mrg80B">
+                                                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+                                                        <div class="form-group">
+                                                            <input class="form-control mrg15B" type="text" placeholder="موضوع پیام" />
+                                                            <textarea class="form-control mrg15B area" cols="60" rows="5"
+                                                                placeholder="متن پیام"></textarea>
+                                                            <a class="btn btn-warning">ارسـال</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <!--<div class="tab-pane  mrg5A mrg20T" id="Recently">
+                                                <div class="row">
+                                                    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                                                        <br />
+                                                        <div class="table-responsive ">
+                                                            <table class="table table-bordered table-hover table-striped dataTable text-center">
+                                                                <thead style="background-color: #3CC1EA; color: #fff;">
+                                                                    <tr>
+                                                                        <th>
+                                                                            ردیف
+                                                                        </th>
+                                                                        <th>
+                                                                            دانلودها 
+                                                                        </th>
+                                                                        <th>
+                                                                            تاریخ
+                                                                        </th>
+                                                                    
+                                                                        <th>
+                                                                            فاکتور
+                                                                        </th>
+                                                                        <th>
+                                                                            دانلود فایل
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            1
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="#">قالب فروشگاهی beyond</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            96/5/8
+                                                                        </td>
+                                                                     
+                                                                        <td>
+                                                                            <a href="#"><i class="fa fa-file blue"></i></a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="#"><i class="fa fa-download blue"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                            2
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="#">کارت ویزیت Univercity</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            96/5/8
+                                                                        </td>
+                                                                      
+                                                                        <td>
+                                                                            <a href="#"><i class="fa fa-file blue"></i></a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="#"><i class="fa fa-download blue"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                           3
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="#">کتاب راه راستگاری - چاپ پنجم</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            97/5/8
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <a href="#"><i class="fa fa-file blue"></i></a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <a href="#"><i class="fa fa-download blue"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock content %}

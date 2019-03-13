@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>:. سورس کلوپ | دانلود منابع طراحی وب و گرافیک .:</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta http-equiv="Content-Language" content="fa" />
+    <meta name="robots" content="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% include 'CSS_src.html' %}
+</head>
+
+<body>
+    {% include 'partials/_navbar.html' %}
+    <img src=" {% static 'Images/Slide32.jpg' %} " class="img-responsive topimg" />
+    <!--[if lte IE 8]>
+      <p class="chromeframe">نسخه مرورگر شما <strong>قدیمی</strong> شده است. جهت مشاهده بهتر سایت <a href="http://browsehappy.com/">لطفا مرورگر خود را به ورژن بالاتر ارتقا دهید</a></p>
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+      <p class="chromeframe">نسخه مرورگر شما <strong>قدیمی</strong> شده است. جهت مشاهده بهتر سایت <a href="http://browsehappy.com/">لطفا مرورگر خود را به ورژن بالاتر ارتقا دهید</a></p>
+    <![endif]-->
+
+    <div class="container mrg40T ">
+        <div class="row">
+            <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
+                <div class="panel-default">
+                    <div class="panel-heading">
+                        <h5>
+                            ورود به سایت
+                        </h5>
+                    </div>
+                    <div class="panel-body">
+                        {% include 'partials/_alerts.html' %}
+                        <div class="alert alert-dash">
+                            <p>
+                                لطفا جهت ورود نام کاربری و کلمه عبور خود را وارد نمایید
+                            </p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                                <div class="form-group">
+                                    <form action="{% url 'login' %}" method="POST">
+                                        <div class="form-group">
+
+                                            {% csrf_token %}
+                                            <h4>نام کاربری :</h4>
+                                            <input class="form-control mrg15B" name="username" type="text" placeholder="لطفا نام کاربری خود را وارد کنید"
+                                                required oninvalid="this.setCustomValidity('نام کاربری خود را وارد کنید')"
+                                                oninput="setCustomValidity('')" />
+
+
+                                            <h4>رمز عبور :</h4>
+                                            <input class="form-control mrg15B" name="password" type="password"
+                                                placeholder="لطفا رمز عبور خود را وارد کنید" required autocomplete="off" />
+                                            <button type="submit" class="btn btn-warning">ورود</button><br />
+                                            <br />
+                                            <a href="lostpassword.html">کلمه عبور خود را فراموش کرده ام</a><br />
+                                            <span class="gray">هنوز حساب کاربری ندارید؟</span>&nbsp;<a href="{% url 'register' %}">ثبت
+                                                نـام کنید</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% include 'JS_src.html' %}
+</body>
+
+</html>

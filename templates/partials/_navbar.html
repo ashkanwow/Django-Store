@@ -1,0 +1,169 @@
+{% load static %}
+<div id="header" class="container-fluid header">
+    <div class="container">
+        <div class="row pad20T">
+            <div id="logo" class="col-lg-2 col-md-2 col-sm-3 col-xs-7">
+                <a href=" {% url 'index' %}">
+                    <img src="{% static 'Images/logo.png'%}" class="img-responsive" style="margin-top: -12px" />
+                </a>
+            </div>
+            <div id="tophead" class="col-lg-7 col-md-7 col-sm-9 col-xs-5">
+                <div class="row pad20L">
+                    <div class="hidden-lg hidden-md col-sm-11 hidden-xs">
+
+                        {% if user.is_authenticated %}
+                        <a href=" {% url 'logout' %} " class="white mrg20L pull-right"><i class="fa fa-sign-in fa-1x"></i>&nbsp;خروج</a>
+<a href=" {% url 'dashboard' %} " class="white mrg20L pull-right"><i class="fa fa-user-plus fa-1x"></i>&nbsp;پنل کاربری</a>
+                            {% else %}
+                            <a href=" {% url 'register' %} " class="white mrg20L pull-right"><i class="fa fa-user"></i>&nbsp;عضویت
+                                در سایت</a>
+                            <a href=" {% url 'login' %} " class="white mrg20L pull-right"><i class="fa fa-lock"></i>
+                                ورود </a>
+                            {% endif %}
+                    </div>
+                    <nav class="col-lg-12 col-md-12 col-sm-1 col-xs-12">
+                        <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="javascript:void(0);"><span></span></a>
+                        <a id="pull" class="hidden-lg hidden-md"></a>
+                        <div class="main-menu">
+                            <!--<div id="header_menu" class="mrg10B">
+                                    <a href="Index.html">
+                                        <img src="Images/logo_sticky.png" class="img-responsive" width="150" height="47" alt="" data-retina="true" />
+                                    </a>
+                                </div>-->
+                            <a href="#" class="open_close" id="close_in">
+                                <i class="icon_set_1_icon-77"></i>
+                            </a>
+                            <div id="MenuSite">
+                                <ul class="nav navbar-nav">
+                                    <li><a class="nav-link" href="{% url 'index' %}"><i class="fa fa-home hidden-md"></i>&nbsp;صفحه
+                                            اصلی</a></li>
+                                    <li class="dropdown mega-dropdown ">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-cogs  hidden-md"></i>&nbsp;صفحات</a>
+                                        <ul class="row dropdown-menu  fadeIn animated">
+                                            <li class="col-sm-6">
+                                                <ul>
+                                                    <li><a href="{% url 'login' %} ">صفحه ورود به سایت</a></li>
+                                                    <li><a href="Register.html">صفحه عضویت</a></li>
+                                                    <li><a href="lostpassword.html">صفحه بازیابی رمز</a></li>
+                                                    <li><a href="Details.html">صفحه جزئیات فایل</a></li>
+                                                    <li><a href="Weblog.html">صفحه وبلاگ ما</a></li>
+                                                    <li><a href="Pageblog.html">صفحه جزئیات وبلاگ</a></li>
+                                                    <li><a href="User.html">صفحه پروفایل کاربر</a></li>
+                                                    <li><a href="AboutUs.html">صفحه درباره ما</a></li>
+                                                    <li><a href="ContactUs.html">صفحه ارتـباط با ما</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="col-sm-6">
+                                                <ul>
+                                                    <li><a href="TopNews.html">جدیدترین اطلاعیه ها</a></li>
+                                                    <li><a href="SearchResult.html">صفحه جستجو</a></li>
+                                                    <li><a href="Privacy.html">صفحه حریم خصوصی</a></li>
+                                                    <li><a href="Guide.html">صفحه راهنمای استفاده</a></li>
+                                                    <li><a href="Wait.html">صفحه منتظر بمانید</a></li>
+                                                    <li><a href="404.html">‌صفحه 404</a></li>
+                                                    <li><a href="Error.html">صفحه پیغام خطا</a></li>
+                                                    <li><a href="Successfulpayment.html">صفحه پرداخت موفق</a></li>
+                                                    <li><a href="Unsuccessfulpayment.html">صفحه پرداخت ناموفق</a></li>
+                                                    <li class="divider"></li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-envira  hidden-md"></i>&nbsp;امکانات</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-mortar-board  hidden-md"></i>&nbsp;آموزشی</a>
+                                        <ul class="row dropdown-menu fadeIn animated">
+                                            <li class="col-sm-12">
+                                                <ul>
+                                                    <li><a href="#">مقالات آموزشی</a></li>
+                                                    <li><a href="#">فیلم‌های آموزشی</a></li>
+                                                    <li><a href="#">معرفی برترین‌ها</a></li>
+                                                    <li><a href="#">طرح‌های خلاقانه</a></li>
+                                                    <li><a href="#">کتاب و مجلات</a></li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href=" {% url 'blogs' %}"><i class="fa fa-rocket  hidden-md"></i>&nbsp;وبلاگ</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'about' %}"><i class="fa fa-coffee  hidden-md"></i>&nbsp;درباره
+                                            ما</a>
+                                    </li>
+                                    <li>
+                                        <a href=" {% url 'contact' %}"><i class="fa fa-phone fa-rotate-270  hidden-md"></i>&nbsp;ارتباط
+                                            با ما</a>
+                                    </li>
+                                    {% if user.is_authenticated %}
+                                    <li class="dropdown hidden-lg hidden-md hidden-sm">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-edge"></i>&nbsp;پنل
+                                            کاربری</a>
+                                        <ul class="row dropdown-menu fadeIn animated">
+                                            <li class="col-sm-12">
+                                                <ul>
+                                                    <li><a href=" {% url 'dashboard' %} ">مشاهده پروفایل</a></li>
+                                                    <li><a href=" {% url 'logout' %} ">خروج</a></li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+                                    {% else %}
+                                    <li class="hidden-lg hidden-md hidden-sm">
+                                        <a href=" {% url 'login' %} "><i class="fa fa-lock"></i>&nbsp;ورود</a>
+                                    </li>
+                                    <li class="hidden-lg hidden-md hidden-sm">
+                                        <a href=" {% url 'register' %} "><i class="fa fa-user"></i>&nbsp;عضویت در سایت</a>
+                                    </li>
+
+                                    {% endif %}
+
+
+
+                                </ul>
+                                <div class="clearfix"></div>
+                                <div class="mrg40A text-center hidden-lg hidden-md">
+                                    <i class="fa fa-calendar"></i>&nbsp;<span class="top fa-1x">امروز : یکشنبه، 12 دی
+                                        1395</span><br />
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 hidden-sm  hidden-xs">
+                {% if user.is_authenticated %}
+                <ul class="nav navbar-nav" style="margin-top: -11px;">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle white" data-toggle="dropdown" href="#"><i class="fa fa-user-plus"></i>&nbsp;پـنل
+                            کاربری</a>
+                        <ul class="row dropdown-menu fadeIn animated">
+                            <li class="col-sm-12">
+                                <ul>
+                                    <li>
+                                        <p class="blue">سلام {{ user.username}}</p>
+                                    </li>
+                                    <li><a href=" {% url 'dashboard' %} ">مشاهده پروفایل</a></li>
+                                    <li><a href=" {% url 'logout' %} ">خـروج</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            {% else %}
+            <a href=" {% url 'register' %} " class="btn btn-success">عضویت در سایت</a>
+            <a href="{% url 'login' %}" class="btn btn-primary">ورود</a>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+</div>

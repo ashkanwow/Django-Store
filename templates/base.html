@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>:. سورس کلوپ | دانلود منابع طراحی وب و گرافیک .:</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta http-equiv="Content-Language" content="fa" />
+    <meta name="robots" content="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% include 'CSS_src.html' %}
+  </head>
+  <body>
+
+    <!---- Nav bar ---->
+    {% include 'partials/_navbar.html' %}
+
+    <!-- Main content-->
+    {% block content %}{% endblock %}
+
+    <!----- footer ---->
+    {% include 'partials/_footer.html' %}
+
+    <!-------------------------------- Scripts  -------------------------------------->
+    {% include 'JS_src.html' %}
+   
+    <script>
+    $(document).ready(function () {
+
+        $("#owl-product").owlCarousel({
+
+            items: 8,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                520: {
+                    items: 2,
+                },
+                768: {
+                    items: 3,
+                },
+                1199: {
+                    items: 5,
+                }
+            }
+        });
+
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+
+        $("#owl-slider").owlCarousel({
+
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            animateOut: 'fadeOut'
+        });
+    });
+</script>
+{% include 'partials/_alert_java.html' %}
+  </body>
+</html>

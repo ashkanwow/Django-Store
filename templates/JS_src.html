@@ -1,0 +1,51 @@
+{% load static %}
+<script src=" {% static 'Js/jquery-1.11.0.min.js' %}"></script>
+<script src=" {% static 'Js/bootstrap.min.js' %}"></script>
+<script src=" {% static 'Js/amazingslider.js' %}" type="text/javascript"></script>
+<script src=" {% static 'Js/initslider-1.js' %}" type="text/javascript"></script>
+<script src=" {% static 'Js/common_scripts_min.js'%} "></script>
+<script src=" {% static 'Js/functions.js' %}"></script>
+<script src=" {% static 'Js/owl.carousel.js'%} "></script>
+
+<script>
+    $(document).ready(function () {
+
+        $("#owl-product").owlCarousel({
+
+            items: 8,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                520: {
+                    items: 2,
+                },
+                768: {
+                    items: 3,
+                },
+                1199: {
+                    items: 5,
+                }
+            }
+        });
+
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+
+        $("#owl-slider").owlCarousel({
+
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            animateOut: 'fadeOut'
+        });
+    });
+</script>

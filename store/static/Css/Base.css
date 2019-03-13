@@ -1,0 +1,423 @@
+﻿
+
+
+ul {
+    list-style: none;
+}
+
+
+.mrg0A {
+    margin: 0 !important;
+}
+
+.mrg5A {
+    margin: 5px !important;
+}
+
+.mrg10A {
+    margin: 10px !important;
+}
+
+.mrg15A {
+    margin: 15px !important;
+}
+
+.mrg20A {
+    margin: 20px !important;
+}
+
+.mrg40A {
+    margin: 40px !important;
+}
+
+.mrg0B {
+    margin-bottom: 0 !important;
+}
+
+.mrg5B {
+    margin-bottom: 5px !important;
+}
+.mrg15B {
+    margin-bottom: 15px !important;
+}
+.mrg25B {
+    margin-bottom: 25px !important;
+}
+
+.mrg50B {
+    margin-bottom: 50px !important;
+}
+.mrg80B {
+    margin-bottom: 50px !important;
+}
+.mrg0T {
+    margin-top: 0 !important;
+}
+
+.mrg5T {
+    margin-top: 5px !important;
+}
+
+.mrg10T {
+    margin-top: 10px !important;
+}
+
+.mrg20T {
+    margin-top: 20px !important;
+}
+
+.mrg40T {
+    margin-top: 40px !important;
+}
+
+.mrg60T {
+    margin-top: 60px !important;
+}
+
+.mrg80T {
+    margin-top: 80px !important;
+}
+
+.mrg100T {
+    margin-top: 100px !important;
+}
+
+.mrg150T {
+    margin-top: 150px !important;
+}
+
+.mrg20TB {
+    margin-top: 20px !important;
+    margin-bottom: 40px !important;
+}
+
+.mrg0R {
+    margin-right: 0 !important;
+}
+
+.mrg5R {
+    margin-right: 5px !important;
+}
+
+.mrg10R {
+    margin-right: 10px !important;
+}
+
+.mrg15R {
+    margin-right: 15px !important;
+}
+
+.mrg20R {
+    margin-right: 20px !important;
+}
+
+.mrg0L {
+    margin-left: 0 !important;
+}
+
+.mrg5L {
+    margin-left: 5px !important;
+}
+
+.mrg10L {
+    margin-left: 10px !important;
+}
+
+.mrg15L {
+    margin-left: 15px !important;
+}
+
+.mrg20L {
+    margin-left: 20px !important;
+}
+
+.pad0A {
+    padding: 0px !important;
+}
+
+.pad5A {
+    padding: 5px !important;
+}
+
+.pad10A {
+    padding: 10px !important;
+}
+
+.pad15A {
+    padding: 15px !important;
+}
+
+.pad20A {
+    padding: 20px !important;
+}
+
+.pad22A {
+    padding: 22px;
+}
+
+.pad25A {
+    padding: 25px !important;
+}
+.pad30A {
+    padding: 30px !important;
+}
+
+.pad50A {
+    padding: 50px !important;
+}
+
+.pad0B {
+    padding-bottom: 0 !important;
+}
+
+.pad5B {
+    padding-bottom: 5px !important;
+}
+
+.pad10B {
+    padding-bottom: 10px !important;
+}
+
+.pad20B {
+    padding-bottom: 20px !important;
+}
+
+.pad30B {
+    padding-bottom: 30px !important;
+}
+
+.pad0T {
+    padding-top: 0 !important;
+}
+
+.pad5T {
+    padding-top: 5px !important;
+}
+
+.pad10T {
+    padding-top: 10px !important;
+}
+
+.pad15T {
+    padding-top: 15px !important;
+}
+
+.pad20T {
+    padding-top: 20px !important;
+}
+
+.pad30T {
+    padding-top: 30px !important;
+}
+.pad60T {
+    padding-top: 60px !important;
+}
+.pad50B {
+    padding-bottom: 50px !important;
+}
+
+.pad110T {
+    padding-top: 110px;
+}
+
+.pad0R {
+    padding-right: 0 !important;
+}
+
+.pad5R {
+    padding-right: 5px !important;
+}
+
+.pad10R {
+    padding-right: 10px !important;
+}
+
+.pad15R {
+    padding-right: 15px !important;
+}
+
+.pad20R {
+    padding-right: 20px !important;
+}
+
+.pad0L {
+    padding-left: 0 !important;
+}
+
+.pad5L {
+    padding-left: 5px !important;
+}
+
+.pad10L {
+    padding-left: 10px !important;
+}
+
+.pad15L {
+    padding-left: 15px !important;
+}
+.pad20L
+{
+    padding-left:20px !important;
+}
+.pad30TB {
+    padding-top: 30px !important;
+    padding-bottom:30px !important;
+}
+.radus5 {
+border-radius:5px}
+.border-radius-3TR {
+    border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -o-border-radius: 3px 3px 0 0;
+}
+
+.border-radius-5TR {
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+}
+
+.border-radius-7TR {
+    border-radius: 7px 7px 0 0;
+    -webkit-border-radius: 7px 7px 0 0;
+    -moz-border-radius: 7px 7px 0 0;
+    -o-border-radius: 7px 7px 0 0;
+}
+
+.border-radius-3BL {
+    border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    -o-border-radius: 0 0 3px 3px;
+}
+
+.border-radius-5BL {
+    border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -o-border-radius: 0 0 5px 5px;
+}
+
+.border-radius-7BL {
+    border-radius: 0 0 7px 7px;
+    -webkit-border-radius: 0 0 7px 7px;
+    -moz-border-radius: 0 0 7px 7px;
+    -o-border-radius: 0 0 7px 7px;
+}
+
+.border-gray {
+    border: 1px #A5A5A5 solid;
+}
+
+.border-gray-B {
+    border-bottom: 1px #A5A5A5 solid;
+}
+
+.border-gray-R {
+    border-right: 1px #A5A5A5 solid;
+}
+
+.border-gray-L {
+    border-left: 1px #efefef solid;
+}
+
+.page-content-box .border-gray, .page-content-box .border-gray-T, .page-content-box .border-gray-B, .page-content-box .border-gray-L, .page-content-box .border-gray-R {
+    border-color: #d8d8d8;
+}
+
+.border-white {
+    border: 1px #FFF solid;
+}
+
+.border-white-T {
+    border-top: 1px #FFF solid;
+}
+
+.border-white-B {
+    border-bottom: 1px #FFF solid;
+}
+.border-red-B {
+          border-bottom:2px solid #ef3f3e !important;
+}
+.border-white-R {
+    border-right: 1px #FFF solid;
+}
+
+.border-white-L {
+    border-left: 1px #FFF solid;
+}
+
+.border-blue {
+    border: 1px solid #bbd7ff;
+}
+
+.border-blue-T {
+    border-top: 1px #0065ca solid;
+}
+
+.border-blue-B {
+    border-bottom: 1px #0065ca solid;
+}
+
+.border-blue-R {
+    border-right: 1px #0065ca solid;
+}
+
+.border-blue-L {
+    border-left: 1px #0065ca solid;
+}
+
+.LTR {
+    direction:ltr
+}
+
+.bg-white {
+    background-color: #FFF;
+}
+
+.blue {
+    color: #0067b3   !important;
+}
+.white {
+    color: #fff !important;
+}
+
+
+.lightGray {
+    color: #9f0000;
+}
+
+.gray {
+    color: #5c5c5c;
+}
+.gray2 {
+    color:#8f8e8e
+}
+
+.bg-orange {
+    background-color: #ffba13;
+}
+
+.light-blue {
+    background-color: #EFF3FB;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.font-size13 {
+    font-size: 13px !important;
+}
+.font-size14 {
+    font-size: 14px !important;
+}
+/*h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{margin:0;padding:0;line-height:130%;font-weight:400}
+h1, .h1{font-size:24px;}
+h2, .h2{font-size:18px;}
+h3, .h3{font-size:16px;}
+h4, .h4{font-size:14px;}
+h5, .h5{font-size:13px;}
+h6, .h6{font-size:12px;}*/

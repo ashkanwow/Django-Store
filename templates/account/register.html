@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>:. سورس کلوپ | دانلود منابع طراحی وب و گرافیک .:</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta http-equiv="Content-Language" content="fa" />
+    <meta name="robots" content="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% include 'CSS_src.html' %}
+</head>
+
+<body>
+    {% include 'partials/_navbar.html' %}
+    <img src=" {% static 'Images/Slide32.jpg' %} " class="img-responsive topimg" />
+    <div class="container mrg40T">
+        <div class="row">
+            <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-12 col-xs-12">
+                <div class="panel-default">
+                    <div class="panel-heading">
+                        <h5>
+                            عضـویت در سایت
+                        </h5>
+                    </div>
+                    <div class="panel-body">
+                        <div class="alert alert-comment ">
+                            <p>
+                                جهت استفاده بهتر از امکانات سایت لطفا ثبت نام کنید
+                            </p>
+                        </div>
+                        {% include 'partials/_alerts.html' %}
+
+                        <div class="row">
+                            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                                <form action="{% url 'register' %}" method="POST">
+                                    <div class="form-group">
+                                        {% csrf_token %}
+                                        <h4>نام :</h4>
+                                        <input class="form-control mrg15B" name="first_name" type="text" placeholder="لطفا نام خود را وارد کنید"
+                                            required oninvalid="this.setCustomValidity('نام خود را وارد کنید')" oninput="setCustomValidity('')"
+                                            pattern=".{2,}" title="نام وارده باید حداقل 3 حرف باشد" />
+
+                                        <h4>نام خانوادگی :</h4>
+                                        <input class="form-control mrg15B" name="last_name" type="text" placeholder="لطفا نام خانوادگی خود را وارد کنید"
+                                            required oninvalid="this.setCustomValidity('نام خانوادگی خود را وارد کنید')"
+                                            oninput="setCustomValidity('')" pattern=".{2,}" title="نام خانوادگی وارده باید حداقل 3 حرف باشد" />
+
+                                        <h4>ایمیل :</h4>
+                                        <input class="form-control mrg15B" name="email" type="email" placeholder="لطفا یک ایمیل معتبر وارد کنید"
+                                            required oninvalid="this.setCustomValidity('لطفا ایمیل را صحیح وارد فرمایید ')"
+                                            oninput="setCustomValidity('')" />
+
+                                        <h4>نام کاربری :</h4>
+                                        <input class="form-control mrg15B" name="username" type="text" placeholder="لطفا نام کاربری خود را وارد کنید"
+                                            required oninvalid="this.setCustomValidity('نام کاربری خود را وارد کنید')"
+                                            oninput="setCustomValidity('')" pattern=".{2,}" title="نام کاربری وارده باید حداقل 3 حرف باشد" />
+
+
+                                        <h4>پسورد :</h4>
+                                        <input class="form-control mrg15B" name="password1" type="password" placeholder="لطفا رمز عبور خود را وارد کنید"
+                                            required oninvalid="this.setCustomValidity('رمز عبور خود را درست وارد کنید')"
+                                            oninput="setCustomValidity('')" pattern=".{6,}" title=" رمز عبور وارده باید حداقل 6 حرف باشد"
+                                            autocomplete="off" />
+
+                                        <input class="form-control mrg15B" name="password2" type="password" placeholder="لطفا رمز عبور خود را مجدد وارد کنید"
+                                            required oninvalid="this.setCustomValidity('رمز عبور خود را درست وارد کنید')"
+                                            oninput="setCustomValidity('')" autocomplete="off" />
+
+                                        <button type="submit" class="btn btn-primary"> ثبت نام &nbsp;<i class="fa fa-paper-plane"></i></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'JS_src.html' %}
+    {% include 'partials/_alert_java.html' %}
+</body>
+
+</html>

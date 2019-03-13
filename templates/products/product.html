@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+{% block content %}
+<img src="Images/Slide32.jpg" class="img-responsive topimg" />
+
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 hidden-xs">
+                <div class="speedbar" style="background-color: #359CBC">
+                    <span class="white">&nbsp;<i class="fa fa-calendar fa-1x"></i>&nbsp;امروز : یکشنبه 26 مردادماه 96</span>
+                </div>
+
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="speedbar" style="background-color: #f5f5f5; color: #444">
+                    <span>شما اینجا هستید » </span>
+                    <span>جزئیات فایل</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="panel-default">
+                    <div class="panel-heading">
+                        پیشنـهادهای ویژه
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-12 col-xs-6">
+                                <a href="#">
+                                    <img src="Images/freetime.png" class="img-responsive" /><br />
+                                </a>
+                            </div>
+                            <div class="col-md-12 col-xs-6">
+                                <a href="#">
+                                    <img src="Images/summer.png" class="img-responsive" />
+                                </a><br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="panel-default pad10A">
+                    <div class="panel-body">
+                        <img src="{{ product.photo.url }}" class="img-responsive mrg15B" />
+                        <h4>دانلود قالب تک صفحه ای و پارالاکس وردپرس 907 نسخه 4.0.28</h4>
+                        <span>Free-html5-website-template-photo-portfolio</span>
+                        <div class="row alert alert-info mrg10T">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <span>سیستم مدیریت محتوا : </span><span>وردپرس</span>
+                                <br />
+                                <span>مرورگرهای پشتیبانی شده : </span><span>کروم ، فایرفاکس</span>
+                                <br />
+                                <span>تعداد ستون ها : </span><span>12</span><br />
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <span>تاریخ انتشار/بروزرسانی : </span><span>96/6/28</span>
+                                <br />
+                                <span>لی اوت : </span><span>ریسپانسیو</span>
+                                <br />
+                                <span>نمایش : </span><span>56</span><br />
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary">دمو</a>
+                        <a href="#" class="btn btn-primary">سایت منبع</a>
+                        <br /><br />
+
+                        <div class="row alert alert-dashblue">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <span class="blue">» دانـلود آنی این فایل به ازای پرداخت فقط 5000 تومان </span>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <a href="#" class="btn btn-success pull-right ">پرداخت و دانلود</a>
+                            </div>
+                        </div>
+                        {% if user.is_authenticated %}
+                        {% else %}
+                        <div class="row alert bg-orange">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <span><i class="fa fa-lightbulb-o fa-2x"></i>&nbsp;کاربر گرامی ، دانلود این فایل تنها
+                                    از طریق عضویت ویژه امکان پذیر می باشد . &nbsp;<a href="Register.aspx">عضـویت درسایت</a></span>
+                            </div>
+                        </div>
+                        {% endif %}
+                        <div>
+                            <p><strong>توضیحات دوره :</strong></p>
+                            <ul>
+                                <p> {{ product.content | safe }} </p>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="row pad15A">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="section-title mrg15B">
+                                <h5 class="titlepg">شاید این مطالب را نیز بپسندید</h5>
+                            </div>
+                            <div class="row product">
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <div class="short-thumb">
+                                            <img src="Images/Products/img_36.jpg" class="img-responsive" />
+                                        </div>
+                                        <div class="title">
+                                            <span>
+                                                در IFA 2017 منتظر چه گوشی‌هایی باشیم؟
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <a href="Details.aspx">
+                                        <div class="short-thumb">
+                                            <img src="Images/Products/img_37.jpg" class="img-responsive" />
+                                        </div>
+                                        <div class="title">
+                                            <span>
+                                                در IFA 2017 منتظر چه گوشی‌هایی باشیم؟
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <div class="short-thumb">
+                                            <img src="Images/Products/img_38.jpg" class="img-responsive" />
+                                        </div>
+                                        <div class="title">
+                                            <span>
+                                                در IFA 2017 منتظر چه گوشی‌هایی باشیم؟
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                    <a href="#">
+                                        <div class="short-thumb">
+                                            <img src="Images/Products/img_39.jpg" class="img-responsive" />
+                                        </div>
+                                        <div class="title">
+                                            <span>
+                                                در IFA 2017 منتظر چه گوشی‌هایی باشیم؟
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                    <br />
+                    <div class="section-title mrg15B">
+                        <h5 class="titlepg"><i class="fa fa-comment-o fa-2x pad15R"></i>&nbsp;ارسال نظر</h5>
+                    </div>
+                    <div class="panel-body">
+                        <span class="pad15R">نظرات پس از تایید مدیریت نمایش داده خواهند شد .</span><br />
+                        <span class="pad15R">کاربر گرامی ایمیل شما نمایش داده نخواهد شد .</span>
+                        <div class="row pad15T">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <input class="form-control mrg15B" type="email" placeholder="لطـفا یک ایمیل معتبر وارد کنید" />
+                                    <textarea class="form-control mrg15B area" cols="60" rows="5" placeholder="لطفا متن پیام را وارد کنید"></textarea>
+                                    <a class="btn btn-warning">ارسـال&nbsp;<i class="fa fa-paper-plane"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="comments">
+                        <div class="section-title mrg15B">
+                            <h5 class="titlepg"><i class="fa fa-comments-o fa-2x pad15R"></i>&nbsp;دیدگاه کاربران</h5>
+                        </div>
+                        <div class="alert alert-dashblue mrg15A">
+                            <div class="row pad15T">
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-9">
+                                    <img class="pull-left img-responsive img-rounded" src="Images/avatar.jpg" />
+                                    <div class="pull-left pad15R">
+                                        <span>Shamim</span>&nbsp;|&nbsp;<span>عضو عادی</span><br />
+                                        <span>26 مرداد 96 19.25</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                                    <a href="#" class="btn btn-success pull-right">پـاسخ&nbsp;<i class="fa fa-mail-reply"></i></a>
+                                </div>
+                            </div>
+                            <div class="row pad10T">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <span class="pad15R">لطفا قالب های وردپرس را هم اضافه کنید - باتشکر </span>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert alert-dashblue mrg15A">
+                            <div class="row pad15T">
+                                <div class="col-lg-10 col-md-10 col-sm-8 col-xs-9">
+                                    <img class="pull-left img-responsive img-rounded" src="Images/avatar2.jpg" />
+                                    <div class="pull-left pad15R">
+                                        <span>Sima67</span>&nbsp;|&nbsp;<span>عضو ویژه</span><br />
+                                        <span>26 مرداد 96 19.25</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-3">
+                                    <a href="#" class="btn btn-success pull-right">پـاسخ&nbsp;<i class="fa fa-mail-reply"></i></a>
+                                </div>
+                            </div>
+                            <div class="row pad15T">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <span class="pad15R">سلام من تو دانلود قالب دچار مشکل میشم دانلود نمیشه هیچ کدوم
+                                    </span>
+                                    <br />
+                                </div>
+                            </div>
+                            <div class="row well mrg10A">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <span>نقل قول :</span>
+                                    <hr />
+                                    <span class="pad15R">کاربرگرامی جهت دانلود ابتدا وارد حساب کاربری خود شوید </span>
+                                    <br />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="row pad10T text-center">
+                            <div class="col-lg-12">
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="#">«</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">6</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">7</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">8</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">9</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">10</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">»</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br />
+{% endblock %}

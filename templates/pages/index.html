@@ -80,21 +80,28 @@
 
                     {% if products %}
                     {% for product in products %}
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <a href=" {% url 'product' product.id %} ">
-                            <div class="short-thumb">
-                                <img src="{{ product.photo.url }}" class="img-responsive" />
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 gray-box host-box box3">
+                        <div class="box">
+                            <img src="{{ product.photo.url }}" class="img-responsive" />
+                            <div class="box-desc">
+                                <h3>سرور مجازی</h3>
+                                <span class="en">VPS</span>
+                                <ul>
+                                    <li><strong>سریع، قابل سفارشی سازی و ایمن</strong></li>
+                                    <li>منابع اختصاصی</li>
+                                    <li>امکان افزایش منابع</li>
+                                    <li>امکان نصب نرم افزارهای خاص</li>
+                                </ul>
+                                <a class="btn btn-success-index" href="https://www.iranserver.com/vps/">
+                                    مشاهده کلاس
+                                </a>
                             </div>
-                            <div class="title">
-                                <span>
-                                    {{ product.title }}
-                                </span>
-                            </div>
-                        </a>
+                        </div>
                     </div>
                     {% endfor %}
                     {% else %}
-                    <div class="col-md-12">
+                    <div class="
+                                    col-md-12">
                         <p> مطلبی وجود ندارد </p>
                     </div>
                     {% endif %}

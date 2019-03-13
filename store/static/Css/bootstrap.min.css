@@ -8366,3 +8366,17 @@ button.close {
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */
+
+
+/* رنگ دکمه های محصولات داخل ایندکس */
+.btn-success-index {
+    color: rgb(231, 9, 9);
+    background-color: #20be4c;
+    border-color: #20be4c;
+}
+
+.btn-success-index:hover {
+    color: rgb(0, 0, 0);
+    background-color: #20be4c;
+    border-color: #20be4c;
+}

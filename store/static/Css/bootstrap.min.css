@@ -8371,9 +8371,10 @@ button.close {
 
 /* رنگ دکمه های محصولات داخل ایندکس */
 .btn-success-index {
-    color: #fff !important;
-    background: #20be4c !important;
-    border-radius: 3px;
+    color: rgb(32, 32, 32) !important;
+    background: #20be4c ;
+    border-radius: 5px !important;
+    border-color: #20be4c;
     padding: 4px 10px;
     font-size: 15px;
     letter-spacing: -1px;

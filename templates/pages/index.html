@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
+{% load humanize %}
 {% load static %}
 {% block content %}
+
 <div id="owl-slider" class="owl-carousel owl-theme " style="position: relative">
     <div class="item">
         <img src="{% static 'Images/Slide2.jpg'%}" alt="slide1" />
@@ -83,13 +85,16 @@
                         <div class="box">
                             <img src="{{ product.photo.url }}" class="img-responsive" />
                             <div class="box-desc">
+                                <div class="h5">نام دوره :</div>
                                 <h6>{{ product.title }} </h6>
                                 <hr class="style1">
+                                <div class="h5">اطلاعات :</div>
+
                                 <ul>
-                                    <li><strong>سریع، قابل سفارشی سازی و ایمن</strong></li>
-                                    <li>منابع اختصاصی</li>
-                                    <li>امکان افزایش منابع</li>
-                                    <li>امکان نصب نرم افزارهای خاص</li>
+                                    <li> دسته : {{ product.category }}</li>
+                                    <li>تاریخ ثبت : {{ product.submit_time }}</li>
+                                    <li>هزینه دوره : {{ product.price | intcomma }} تومان </li>
+                                    <li>تعداد باقیمانده : {{ product.entity }}</li>
                                 </ul>
                                 <hr class="style1">
                                 <a class="btn btn-success-index " href="{% url 'product' product.id  %}">
